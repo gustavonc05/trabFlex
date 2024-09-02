@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>replit</title>
+  
+  <style>
+    /* NAV */
+    nav {
+      background-color: #018afa;
+      padding: 0;
+      margin: 0;
+    }
+
+    .menu {
+      display: flex;
+      justify-content: space-around;
+      color: #FFF;
+    }
+
+    .menu ul {
+      display: flex;
+      gap: 40px;
+    }
+
+    .menu li {
+      list-style: none;
+      border: 2px solid #FFF;
+      padding: 10px;
+      border-radius: 10px;
+      background-color: #FFF;
+      color: black;
+    }
+    /* Fim do NAV*/
+    body{
+    background-color: #dddddd
+  }
+  .container {
+    border: 2px solid #333;
+    padding: 5px;
+    margin-bottom: 10px;
+  }
+  .box {
+    background-color: #018afa;
+    color: white;
+    padding: 10px;
+    margin: 5px;
+    text-align: center;
+  }</style>
+  
+</head>
+
+<body>
+  <!-- MENU BOTOES (NAV) -->
+  <nav>
+    <div class="menu">
+      <div class="bloco_titulo">
+        <h1> FlexBox </h1>
+      </div>
+      <ul>
+        <li> Home </li>
+        <li> Exemplos </li>
+      </ul>
+    </div>
+  </nav>
+  <!-- Fim NAV-->
+
+  <h1>Visualização de Exemplos Flexbox</h1>
+  <!-- display flex-->
+  <h2>Display: flex</h2>
+  <div class="container" style="display: flex;">
+    <div class="box">Box 1</div>
+    <div class="box">Box 2</div>
+    <div class="box">Box 3</div>
+  </div>
+
+  <!-- flex direction-->
+  <h2>flex-direction: row-reverse</h2>
+  <div class="container" style="display: flex; flex-direction: row-reverse;">
+    <div class="box">Box 1</div>
+    <div class="box">Box 2</div>
+    <div class="box">Box 3</div>
+  </div>
+
+
+  <!-- flex wrap-->
+  <h2>flex-wrap: wrap</h2>
+  <div class="container" style="display: flex; flex-wrap: wrap;">
+    <div class="box" style="flex: 1 1 200px;">Box 1</div>
+    <div class="box" style="flex: 1 1 200px;">Box 2</div>
+    <div class="box" style="flex: 1 1 200px;">Box 3</div>
+  </div>
+
+  <!-- flex flow-->
+  <h2>flex-flow: row wrap</h2>
+  <div class="container" style="display: flex; flex-flow: column wrap;">
+    <div class="box" style="flex">Box 1</div>
+    <div class="box" style="flex">Box 2</div>
+    <div class="box" style="flex">Box 3</div>
+
+  </div>
+
+  <!-- justify content-->
+  <h2>justify-content: space-between</h2>
+  <div class="container" style="display: flex; justify-content: space-between;">
+    <div class="box">Box 1</div>
+    <div class="box">Box 2</div>
+    <div class="box">Box 3</div>
+  </div>
+
+  <!-- align items -->
+  <h2>align-items: flex-end</h2>
+  <div class="container" style="display: flex; align-items: flex-end; height: 150px;">
+    <div class="box">Box 1</div>
+    <div class="box">Box 2</div>
+    <div class="box">Box 3</div>
+  </div>
+
+  <!-- align content -->
+  <h2>align-content: stretch</h2>
+  <div class="container" style="display: flex; align-content: stretch;">
+    <div class="box" style="flex: 1 1 200px;">Box 1</div>
+    <div class="box" style="flex: 1 1 200px;">Box 2</div>
+    <div class="box" style="flex: 1 1 200px;">Box 3</div>
+  </div>
+
+  <!--order -->
+  
+  <h2>order </h2>
+  <div class="container" style="display: flex;">
+      <div class="box" style="order: 2;">Box 1</div>
+      <div class="box" style="order: 1;">Box 2</div>
+      <div class="box" style="order: 3;">Box 3</div>
+  </div>
+
+  <!-- flex grow -->
+  <h2>flex-grow</h2>
+  <div class="container" style="display: flex;">
+      <div class="box" style="flex-grow: 1;">Box 1</div>
+      <div class="box" style="flex-grow: 2;">Box 2</div>
+      <div class="box" style="flex-grow: 1;">Box 3</div>
+  </div>
+
+  <!-- flex shrink -->
+  <h2>flex-shrink</h2>
+  <div class="container" style="display: flex; width: 400px;">
+      <div class="box" style="flex-shrink: 1;">Box 1</div>
+      <div class="box" style="flex-shrink: 2;">Box 2</div>
+      <div class="box" style="flex-shrink: 1;">Box 3</div>
+  </div>
+
+
+  <!-- flex basis -->
+  <h2>flex-basis</h2>
+  <div class="container" style="display: flex;">
+      <div class="box" style="flex-basis: 100px;">Box 1</div>
+      <div class="box" style="flex-basis: 200px;">Box 2</div>
+      <div class="box" style="flex-basis: 250px;">Box 3</div>
+  </div>
+
+  <!-- align self -->
+  <h2>align-self flex-end</h2>
+  <div class="container" style="display: flex; height: 150px;">
+      <div class="box">Box 1</div>
+      <div class="box" style="align-self: flex-end;">Box 2</div>
+      <div class="box">Box 3</div>
+  </div>
+
+
+  <!-- gap -->
+  <h2>gap</h2>
+  <div class="container" style="display: flex; gap: 20px;">
+      <div class="box">Box 1</div>
+      <div class="box">Box 2</div>
+      <div class="box">Box 3</div>
+  </div>
+
+
+
+
+
+
+
+</body>
+
+</html>
