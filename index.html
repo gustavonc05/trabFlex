@@ -1,12 +1,171 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="css/style.css">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>replit</title>
+  <style>
+    /* Body e divisão site em parte Direita e parte Esquerda */
+    body {
+      font-family: Arial, Helvetica, sans-serif;
+      padding: 0;
+      margin: 0;
+    }
+
+    .container {
+      display: flex;
+      justify-content: space-around;
+    }
+
+    .parte_esquerda h1,
+    .parte_direita h1 {
+      align-items: center;
+    }
+
+    /* NAV */
+    nav {
+      background-color: #018afa;
+      padding: 0;
+      margin: 0;
+    }
+
+    .menu {
+      display: flex;
+      justify-content: space-around;
+      color: #FFF;
+    }
+
+    .menu ul {
+      display: flex;
+      gap: 40px;
+    }
+
+    .menu li {
+      list-style: none;
+      border: 2px solid #FFF;
+      padding: 10px;
+      border-radius: 10px;
+      background-color: #FFF;
+      color: black;
+    }
+
+    /* Fim do NAV*/
+
+    /* Flex Container com display flex row */
+    .container_3 {
+      display: flex;
+      gap: 40px;
+    }
+
+    /* Flex Container com display flex column */
+    .container_2 {
+      display: flex;
+      flex-direction: column;
+      gap: 20px
+    }
+
+    .quadrado {
+      border: 2px solid black;
+      width: 100px;
+      border-radius: 5px;
+      display: flex;
+      justify-content: center;
+    }
+  </style>
 </head>
+
 <body>
-    
+  <!-- MENU BOTOES (NAV) -->
+  <nav>
+    <div class="menu">
+      <div class="bloco_titulo">
+        <h1> FlexBox </h1>
+      </div>
+      <ul>
+        <li> Home </li>
+        <li> Exemplos Justify-content</li>
+        <li> Opcao 3 </li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- Flex Container-->
+  <div class="flex_container">
+    <h1> Flex Container </h1>
+    <p> Para aplicar a propriedade Flex no flexbox podemos usar o comando: </p>
+    <ul>
+      <li> Display: Flex </li>
+      <li> Display: Block </li>
+      <li> Display: Inline </li>
+    </ul>
+    <p> Porém para usarmos a propriedade Flex devemos aplicar o próprio: Display Flex</p>
+    <h1> Exemplo ANTES </h1>
+    <div class="container_2">
+      <div class="quadrado"> Item 1 </div>
+      <div class="quadrado"> Item 2 </div>
+      <div class="quadrado"> Item 3 </div>
+    </div>
+    <h1> Exemplo DEPOIS </h1>
+    <div class="container_3">
+      <div class="quadrado"> Item 1 </div>
+      <div class="quadrado"> Item 2 </div>
+      <div class="quadrado"> Item 3 </div>
+    </div>
+  </div>
+  <!-- Fim Flex Container-->
+  <br>
+  <hr>
+  <!-- Propriedade dos Filhos -->
+  <div class="propriedades_de_filhos">
+    <h1>Propriedades Filhos no Flexbox</h1>
+    <p>As propriedades filhos no Flexbox são aquelas aplicadas diretamente aos itens flexíveis dentro de um contêiner
+      flexível. Elas controlam o comportamento individual de cada item, como a ordem de exibição, crescimento,
+      encolhimento, tamanho inicial e alinhamento ao longo do eixo cruzado. Estas propriedades permitem um controle
+      granular sobre o layout, facilitando a criação de interfaces responsivas e bem alinhadas.</p>
+    <p>E abaixo são alguns exemplos de cada um:</p>
+    <h2>Exemplo de Order</h2>
+    <div class="container order-example">
+      <div class="item item1">Item 1</div>
+      <div class="item item2">Item 2</div>
+      <div class="item item3">Item 3</div>
+    </div>
+
+    <h2>Exemplo de Flex-grow</h2>
+    <div class="container flex-grow-example">
+      <div class="item item1">Item 1</div>
+      <div class="item item2">Item 2</div>
+      <div class="item item3">Item 3</div>
+    </div>
+
+    <h2>Exemplo de Flex-shrink</h2>
+    <div class="container flex-shrink-example">
+      <div class="item item1">Item 1</div>
+      <div class="item item2">Item 2</div>
+      <div class="item item3">Item 3</div>
+    </div>
+
+    <h2>Exemplo de Flex-basis</h2>
+    <div class="container flex-basis-example">
+      <div class="item item1">Item 1</div>
+      <div class="item item2">Item 2</div>
+      <div class="item item3">Item 3</div>
+    </div>
+
+    <h2>Exemplo de Flex (grow, shrink, basis)</h2>
+    <div class="container flex-example">
+      <div class="item item1">Item 1</div>
+      <div class="item item2">Item 2</div>
+      <div class="item item3">Item 3</div>
+    </div>
+
+    <h2>Exemplo de Align-self</h2>
+    <div class="container align-self-example">
+      <div class="item item1">Item 1</div>
+      <div class="item item2">Item 2</div>
+      <div class="item item3">Item 3</div>
+    </div>
+
 </body>
+
 </html>
