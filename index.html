@@ -72,6 +72,97 @@
       display: flex;
       justify-content: center;
     }
+
+    /* ########## Propriedade dos filhos CSS #########*/
+
+.container {
+  display: flex;
+  gap: 10px;
+  padding: 20px;
+  border: 2px solid #000;
+  margin-bottom: 20px;
+}
+
+.item {
+  background-color: lightblue;
+  padding: 20px;
+  border: 2px solid blue;
+  text-align: center;
+}
+
+/* Exemplo de order */
+.order-example .item1 {
+  order: 2;
+}
+.order-example .item2 {
+  order: 1;
+}
+.order-example .item3 {
+  order: 3;
+}
+
+/* Exemplo de flex-grow */
+.flex-grow-example .item1 {
+  flex-grow: 1;
+}
+.flex-grow-example .item2 {
+  flex-grow: 2;
+}
+.flex-grow-example .item3 {
+  flex-grow: 1;
+}
+
+/* Exemplo de flex-shrink */
+.flex-shrink-example {
+  width: 300px;
+}
+.flex-shrink-example .item1 {
+  flex-shrink: 1;
+}
+.flex-shrink-example .item2 {
+  flex-shrink: 0;
+}
+.flex-shrink-example .item3 {
+  flex-shrink: 1;
+}
+
+/* Exemplo de flex-basis */
+.flex-basis-example .item1 {
+  flex-basis: 100px;
+}
+.flex-basis-example .item2 {
+  flex-basis: 150px;
+}
+.flex-basis-example .item3 {
+  flex-basis: 200px;
+}
+
+/* Exemplo de flex */
+.flex-example .item1 {
+  flex: 1 1 100px;
+}
+.flex-example .item2 {
+  flex: 2 1 150px;
+}
+.flex-example .item3 {
+  flex: 1 2 200px;
+}
+
+/* Exemplo de align-self */
+.align-self-example {
+  height: 200px;
+  align-items: stretch;
+}
+.align-self-example .item1 {
+  align-self: flex-start;
+}
+.align-self-example .item2 {
+  align-self: center;
+}
+.align-self-example .item3 {
+  align-self: flex-end;
+}
+
   </style>
 </head>
 
@@ -116,6 +207,7 @@
   <!-- Fim Flex Container-->
   <br>
   <hr>
+
   <!-- Propriedade dos Filhos -->
   <div class="propriedades_de_filhos">
     <h1>Propriedades Filhos no Flexbox</h1>
