@@ -92,3 +92,5 @@ stretch: Faz com que o item se estique para preencher o espaço disponível ao l
 ## Referências e Recursos
 
 - Acesse o arquivo exemplos.html para conferir os exemplos de cada atributo ligado ao flexbox
+- Os participantes da criação desse projeto foram: David, Gabriel, Gustavo e Rodrygo
+- Obrigado pela atenção!
