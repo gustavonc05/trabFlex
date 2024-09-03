@@ -83,6 +83,10 @@ Align-self:
 align-self: Permite que o alinhamento de um item flexível ao longo do eixo cruzado seja ajustado individualmente, sobrepondo o alinhamento definido pelo container com align-items.
 auto: O item flexível usa o valor de alinhamento do container flexível, conforme definido por align-items.
 flex-start: Alinha o item ao início do eixo cruzado.
+
+## Referências e Recursos
+
+- Acesse o arquivo index.html para conferir os exemplos de cada atributo ligado ao flexbox
 flex-end: Alinha o item ao final do eixo cruzado.
 center: Centraliza o item ao longo do eixo cruzado.
 baseline: Alinha o item ao longo da linha de base do texto, alinhando as linhas de base dos itens.
