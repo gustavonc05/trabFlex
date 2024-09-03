@@ -1,73 +1,205 @@
 <!DOCTYPE html>
 <html>
+  <!-- Alunos: David, Gabriel, Gustavo e Rodrygo -->
+  <!-- RA: 10417694, 10443681, 10437996, 10381768  -->
 
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width">
-  <title>replit</title>
-  
+  <title> Flexbox </title>
+
   <style>
+    body {
+      background-color: #dddddd;
+      margin: 0px;
+      padding: 0px;
+      font-family: Arial;
+    }
+
     /* NAV */
     nav {
       background-color: #018afa;
       padding: 0;
       margin: 0;
+      height: 60px;
+      display: flex;
+      justify-content: center;
+      text-align: center;
+      align-items: center;
     }
 
     .menu {
-      display: flex;
-      justify-content: space-around;
-      color: #FFF;
+      font-weight: bold;
+      font-size: xx-large;
+      color: White;
     }
 
-    .menu ul {
+
+    /* Fim do NAV*/
+
+    /* Título inicial da pagina */
+    .container_titulo_exemplos {
+      display: flex;
+      justify-content: center;
+    }
+
+    .titulo_exemplos {
+      text-decoration: underline;
+    }
+
+    /* Flex Container com display flex row */
+    .container_3 {
       display: flex;
       gap: 40px;
     }
 
-    .menu li {
-      list-style: none;
-      border: 2px solid #FFF;
-      padding: 10px;
-      border-radius: 10px;
-      background-color: #FFF;
-      color: black;
+    /* Flex Container com display flex column */
+    .container_2 {
+      display: flex;
+      flex-direction: column;
+      gap: 20px
     }
-    /* Fim do NAV*/
-    body{
-    background-color: #dddddd
-  }
-  .container {
-    border: 2px solid #333;
-    padding: 5px;
-    margin-bottom: 10px;
-  }
-  .box {
-    background-color: #018afa;
-    color: white;
-    padding: 10px;
-    margin: 5px;
-    text-align: center;
-  }</style>
-  
+
+    .quadrado {
+      border: 2px solid black;
+      width: 100px;
+      border-radius: 5px;
+      display: flex;
+      justify-content: center;
+    }
+/* container geral (criado para a box) */
+    .container {
+      border: 2px solid #333;
+      padding: 5px;
+      margin-bottom: 10px;
+    }
+
+    .box {
+      background-color: #018afa;
+      color: white;
+      padding: 10px;
+      margin: 5px;
+      text-align: center;
+    }
+
+    .container {
+      display: flex;
+      gap: 10px;
+      padding: 20px;
+      border: 2px solid #000;
+      margin-bottom: 20px;
+    }
+
+    .item {
+      background-color: lightblue;
+      padding: 20px;
+      border: 2px solid blue;
+      text-align: center;
+    }
+
+    /* Justify-content Título*/
+    .container_titulo_justify {
+      display: flex;
+      justify-content: center;
+    }
+
+    .titulo_justify {
+      text-decoration: underline;
+    }
+
+
+    /* align content*/
+    .container-content {
+      display: flex;
+      flex-wrap: wrap;
+      height: 200px;
+      border: 1px solid #000;
+    }
+
+    .item-align-content {
+      width: 50px;
+      height: 50px;
+      background-color: lightblue;
+      margin: 5px;
+    }
+
+    .flex-start {
+      align-content: flex-start;
+    }
+
+    .flex-end {
+      align-content: flex-end;
+    }
+
+    .center {
+      align-content: center;
+    }
+
+    .stretch {
+      align-content: stretch;
+    }
+
+    .space-between {
+      align-content: space-between;
+    }
+
+    .space-around {
+      align-content: space-around;
+    }
+
+    /* Exemplo de align-self */
+    .align-self-example {
+      height: 200px;
+      align-items: stretch;
+    }
+
+    .align-self-example .item1 {
+      align-self: flex-start;
+    }
+
+    .align-self-example .item2 {
+      align-self: center;
+    }
+
+    .align-self-example .item3 {
+      align-self: flex-end;
+    }
+
+    .align-self-example .item4 {
+      align-self: auto;
+    }
+
+    .align-self-example .item5 {
+      align-self: baseline;
+    }
+
+    .align-self-example .item6 {
+      align-self: stretch;
+    }
+
+  </style>
+
 </head>
 
 <body>
   <!-- MENU BOTOES (NAV) -->
   <nav>
     <div class="menu">
-      <div class="bloco_titulo">
-        <li><a href="index.html">FlexBox</a></li>
-      </div>
-      <ul>
-        <li><a href="exemplos.html">Exemplos</a></li>
-        <li> Opcao 3 </li>
-      </ul>
+      <h1> Flexbox</h1>
     </div>
   </nav>
   <!-- Fim NAV-->
 
-  <h1>Visualização de Exemplos Flexbox</h1>
+  <!-- Fim propriedade filhos -->
+  <br>
+  <hr>
+  <!-- Título Exemplos Flex Box (TITULO INCIAL DA PAGINA) -->
+  <div class="container_titulo_exemplos">
+    <div class="titulo_exemplos">
+      <h1>Visualização de Exemplos Flexbox</h1>
+    </div>
+  </div>
+
   <!-- display flex-->
   <h2>Display: flex</h2>
   <div class="container" style="display: flex;">
@@ -76,9 +208,33 @@
     <div class="box">Box 3</div>
   </div>
 
-  <!-- flex direction-->
+  <!-- Flex direcction row -->
+  <h2>flex-direction: row</h2>
+  <div class="container" style="display: flex; flex-direction: row;">
+    <div class="box">Box 1</div>
+    <div class="box">Box 2</div>
+    <div class="box">Box 3</div>
+  </div>
+
+  <!-- flex direction row-reverse -->
   <h2>flex-direction: row-reverse</h2>
   <div class="container" style="display: flex; flex-direction: row-reverse;">
+    <div class="box">Box 1</div>
+    <div class="box">Box 2</div>
+    <div class="box">Box 3</div>
+  </div>
+
+  <!-- Flex direcction column -->
+  <h2>flex-direction: column </h2>
+  <div class="container" style="display: flex; flex-direction: column;">
+    <div class="box">Box 1</div>
+    <div class="box">Box 2</div>
+    <div class="box">Box 3</div>
+  </div>
+
+  <!-- Flex direcction column-reverse -->
+  <h2>flex-direction: column-reverse </h2>
+  <div class="container" style="display: flex; flex-direction: column-reverse;">
     <div class="box">Box 1</div>
     <div class="box">Box 2</div>
     <div class="box">Box 3</div>
@@ -102,7 +258,55 @@
 
   </div>
 
+  <!-- flex flow: column-wrap -->
+  <h2>flex-flox: column-wrap</h2>
+  <div class="container" style="display: flex; flex-wrap: wrap;">
+    <div class="box" style="flex: 1 1 200px;">Box 1</div>
+    <div class="box" style="flex: 1 1 200px;">Box 2</div>
+    <div class="box" style="flex: 1 1 200px;">Box 3</div>
+  </div>
+
   <!-- justify content-->
+  <!-- Título <h1> Justify content </h1> -->
+  <div class="container_titulo_justify">
+    <div class="titulo_justify">
+      <h1> Exemplos da propriedade: Justify-content </h1>
+    </div>
+  </div>
+  <!-- justify-content: flex-start-->
+  <h2>justify-content: flex-start</h2>
+  <div class="container" style="display: flex; justify-content: flex-start;">
+    <div class="box">Box 1</div>
+    <div class="box">Box 2</div>
+    <div class="box">Box 3</div>
+  </div>
+
+  <!-- justify-content: flex-end-->
+  <h2>justify-content: flex-end</h2>
+  <div class="container" style="display: flex; justify-content: flex-end;">
+    <div class="box">Box 1</div>
+    <div class="box">Box 2</div>
+    <div class="box">Box 3</div>
+  </div>
+
+  <!-- justify-content: center-->
+  <h2>justify-content: flex-center</h2>
+  <div class="container" style="display: flex; justify-content: center;">
+    <div class="box">Box 1</div>
+    <div class="box">Box 2</div>
+    <div class="box">Box 3</div>
+  </div>
+
+
+  <!-- justify-content: space-around-->
+  <h2>justify-content: space-around</h2>
+  <div class="container" style="display: flex; justify-content: space-around;">
+    <div class="box">Box 1</div>
+    <div class="box">Box 2</div>
+    <div class="box">Box 3</div>
+  </div>
+
+  <!-- justify-content: space-between -->
   <h2>justify-content: space-between</h2>
   <div class="container" style="display: flex; justify-content: space-between;">
     <div class="box">Box 1</div>
@@ -110,7 +314,56 @@
     <div class="box">Box 3</div>
   </div>
 
-  <!-- align items -->
+  <!-- justify-content: space-evenly -->
+  <h2>justify-content: space-evenly</h2>
+  <div class="container" style="display: flex; justify-content: space-evenly;">
+    <div class="box">Box 1</div>
+    <div class="box">Box 2</div>
+    <div class="box">Box 3</div>
+  </div>
+
+  <!-- justify-content: safe -->
+  <h2>justify-content: safe</h2>
+  <div class="container" style="display: flex; justify-content: safe;">
+    <div class="box">Box 1</div>
+    <div class="box">Box 2</div>
+    <div class="box">Box 3</div>
+  </div>
+
+  <!-- justify-content: unsafe -->
+  <h2>justify-content: unsafe</h2>
+  <div class="container" style="display: flex; justify-content: unsafe;">
+    <div class="box">Box 1</div>
+    <div class="box">Box 2</div>
+    <div class="box">Box 3</div>
+  </div>
+
+  <!-- Align items -->
+  <!-- Título <h1> Align Items </h1> -->
+  <!-- Reutilizei classes de ttitulos como modelo para estilizar igual todos h1-->
+  <div class="container_titulo_justify">
+    <div class="titulo_justify">
+      <h1> Exemplos da propriedade: Align-items </h1>
+    </div>
+  </div>
+
+  <!-- flex-start -->
+  <h2>align-items: flex-start</h2>
+  <div class="container" style="display: flex; align-items: flex-start; height: 150px;">
+    <div class="box">Box 1</div>
+    <div class="box">Box 2</div>
+    <div class="box">Box 3</div>
+  </div>
+
+  <!-- flex-center -->
+  <h2>align-items: flex-center</h2>
+  <div class="container" style="display: flex; align-items: center; height: 150px;">
+    <div class="box">Box 1</div>
+    <div class="box">Box 2</div>
+    <div class="box">Box 3</div>
+  </div>
+
+  <!-- flex-end -->
   <h2>align-items: flex-end</h2>
   <div class="container" style="display: flex; align-items: flex-end; height: 150px;">
     <div class="box">Box 1</div>
@@ -118,71 +371,153 @@
     <div class="box">Box 3</div>
   </div>
 
-  <!-- align content -->
-  <h2>align-content: stretch</h2>
-  <div class="container" style="display: flex; align-content: stretch;">
-    <div class="box" style="flex: 1 1 200px;">Box 1</div>
-    <div class="box" style="flex: 1 1 200px;">Box 2</div>
-    <div class="box" style="flex: 1 1 200px;">Box 3</div>
+  <!-- base line -->
+  <h2>align-items: base line</h2>
+  <div class="container" style="display: flex; align-items: baseline; height: 150px;">
+    <div class="box">Box 1</div>
+    <div class="box">Box 2</div>
+    <div class="box">Box 3</div>
   </div>
 
-  <!--order -->
-  
+
+  <!-- Align content -->
+  <!-- Título <h1> Align Content </h1> -->
+  <!-- Reutilizei classes de ttitulos como modelo para estilizar igual todos h1-->
+  <div class="container_titulo_justify">
+    <div class="titulo_justify">
+      <h1> Exemplos da propriedade: Align-content </h1>
+    </div>
+  </div>
+
+  <!-- align contents abaixo utilizaram containers diferentes para nao interferir com outros exemplos-->
+  <!-- align content: stretch -->
+  <h2>align-content: stretch</h2>
+  <div class="container-content stretch">
+    <div class="item-align-content"></div>
+    <div class="item-align-content"></div>
+    <div class="item-align-content"></div>
+    <div class="item-align-content"></div>
+  </div>
+
+  <!-- align content -->
+  <h2>align-content: start</h2>
+  <div class="container-content flex-start">
+    <div class="item-align-content"></div>
+    <div class="item-align-content"></div>
+    <div class="item-align-content"></div>
+    <div class="item-align-content"></div>
+  </div>
+
+  <!-- align content -->
+  <h2>align-content: end</h2>
+  <div class="container-content flex-end">
+    <div class="item-align-content"></div>
+    <div class="item-align-content"></div>
+    <div class="item-align-content"></div>
+    <div class="item-align-content"></div>
+  </div>
+
+  <!-- align content -->
+  <h2>align-content: center</h2>
+  <div class="container-content center">
+    <div class="item-align-content"></div>
+    <div class="item-align-content"></div>
+    <div class="item-align-content"></div>
+    <div class="item-align-content"></div>
+  </div>
+
+  <!-- align content -->
+  <h2>align-content: space-between</h2>
+  <div class="container-content space-between">
+    <div class="item-align-content"></div>
+    <div class="item-align-content"></div>
+    <div class="item-align-content"></div>
+    <div class="item-align-content"></div>
+  </div>
+
+  <!-- align content -->
+  <h2>align-content: space-around</h2>
+  <div class="container-content space-around">
+    <div class="item-align-content"></div>
+    <div class="item-align-content"></div>
+    <div class="item-align-content"></div>
+    <div class="item-align-content"></div>
+  </div>
+
+
+  <!-- Título <h1> Align Items </h1> -->
+  <!-- Reutilizei classes de ttitulos como modelo para estilizar igual todos h1-->
+  <!-- Order -->
+  <div class="container_titulo_justify">
+    <div class="titulo_justify">
+      <h1> Exemplos da propriedade: Order </h1>
+    </div>
+  </div>
   <h2>order </h2>
   <div class="container" style="display: flex;">
-      <div class="box" style="order: 2;">Box 1</div>
-      <div class="box" style="order: 1;">Box 2</div>
-      <div class="box" style="order: 3;">Box 3</div>
+    <div class="box" style="order: 2;">Box 1</div>
+    <div class="box" style="order: 1;">Box 2</div>
+    <div class="box" style="order: 3;">Box 3</div>
   </div>
 
+  <!-- Título <h1> Flex </h1> -->
+  <!-- Reutilizei classes de ttitulos como modelo para estilizar igual todos h1-->
+  <div class="container_titulo_justify">
+    <div class="titulo_justify">
+      <h1> Exemplos da propriedade: Flex </h1>
+    </div>
+  </div>
+  
   <!-- flex grow -->
   <h2>flex-grow</h2>
   <div class="container" style="display: flex;">
-      <div class="box" style="flex-grow: 1;">Box 1</div>
-      <div class="box" style="flex-grow: 2;">Box 2</div>
-      <div class="box" style="flex-grow: 1;">Box 3</div>
+    <div class="box" style="flex-grow: 1;">Box 1</div>
+    <div class="box" style="flex-grow: 2;">Box 2</div>
+    <div class="box" style="flex-grow: 1;">Box 3</div>
   </div>
 
   <!-- flex shrink -->
   <h2>flex-shrink</h2>
   <div class="container" style="display: flex; width: 400px;">
-      <div class="box" style="flex-shrink: 1;">Box 1</div>
-      <div class="box" style="flex-shrink: 2;">Box 2</div>
-      <div class="box" style="flex-shrink: 1;">Box 3</div>
+    <div class="box" style="flex-shrink: 1;">Box 1</div>
+    <div class="box" style="flex-shrink: 2;">Box 2</div>
+    <div class="box" style="flex-shrink: 1;">Box 3</div>
   </div>
 
 
   <!-- flex basis -->
   <h2>flex-basis</h2>
   <div class="container" style="display: flex;">
-      <div class="box" style="flex-basis: 100px;">Box 1</div>
-      <div class="box" style="flex-basis: 200px;">Box 2</div>
-      <div class="box" style="flex-basis: 250px;">Box 3</div>
+    <div class="box" style="flex-basis: 100px;">Box 1</div>
+    <div class="box" style="flex-basis: 200px;">Box 2</div>
+    <div class="box" style="flex-basis: 250px;">Box 3</div>
   </div>
 
   <!-- align self -->
   <h2>align-self flex-end</h2>
   <div class="container" style="display: flex; height: 150px;">
-      <div class="box">Box 1</div>
-      <div class="box" style="align-self: flex-end;">Box 2</div>
-      <div class="box">Box 3</div>
+    <div class="box">Box 1</div>
+    <div class="box" style="align-self: flex-end;">Box 2</div>
+    <div class="box">Box 3</div>
   </div>
 
+  <h2>Exemplos de diferentes Align-self num unico container</h2>
+  <div class="container align-self-example">
+    <div class="item item1">Item 1</div> <!-- flex-start-->
+    <div class="item item2">Item 2</div> <!-- center-->
+    <div class="item item3">Item 3</div> <!-- flex-end-->
+    <div class="item item4">Item 4</div> <!-- auto-->
+    <div class="item item5">Item 5</div> <!-- baseline-->
+    <div class="item item5">Item 6</div> <!-- stretch-->
+  </div>
 
   <!-- gap -->
   <h2>gap</h2>
-  <div class="container" style="display: flex; gap: 20px;">
-      <div class="box">Box 1</div>
-      <div class="box">Box 2</div>
-      <div class="box">Box 3</div>
+  <div class="container" style="display: flex;;">
+    <div class="box" style="gap: 20px;">Box 1</div> <!-- gap -->
+    <div class="box" style="gap: 20px 30px;">Box 2</div> <!-- row gap ,column gap -->
+    <div class="box" style="row-gap: 50px;">Box 3</div> <!-- row gap -->
+    <div class="box" style="column-gap: 60px;">Box 4</div> <!-- column gap -->
   </div>
-
-
-
-
-
-
-
 </body>
-
 </html>
