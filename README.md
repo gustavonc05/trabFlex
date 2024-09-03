@@ -1,4 +1,4 @@
-Neste README, você encontrará uma explicação detalhada de cada atributo do Flexbox. Para visualizar exemplos práticos de como esses atributos funcionam, abra o arquivo exemplos.html.
+<span> Neste README, você encontrará uma explicação detalhada de cada atributo do Flexbox. Para visualizar exemplos práticos de como esses atributos funcionam, abra o arquivo exemplos.html. </span>
 
 
 Display: flex
