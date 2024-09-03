@@ -13,7 +13,6 @@ Descrição: Um elemento com display: block ocupa toda a largura disponível e c
 Características:
 Ocupa 100% da largura do seu container pai, por padrão.
 Respeita margens, preenchimento (padding) e bordas.
-Exemplo de elementos: <div>, <h1>, <p>.
 
 Display: inline
 Descrição: Elementos com display: inline ocupam apenas o espaço necessário para o seu conteúdo, e não começam em uma nova linha.
@@ -21,7 +20,6 @@ Características:
 Ocupa apenas a largura do conteúdo.
 Outros elementos inline podem ser posicionados ao lado dele na mesma linha.
 Não respeita largura (width) e altura (height).
-Exemplo de elementos: <span>, <a>, <em>.
 
 Flex-direction: 
 row: Alinha os itens ao longo do eixo horizontal, começando da esquerda para a direita. Este é o comportamento padrão de um container flexível.
